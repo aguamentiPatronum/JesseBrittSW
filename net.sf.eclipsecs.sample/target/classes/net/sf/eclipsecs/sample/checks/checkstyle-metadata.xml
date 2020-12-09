@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE checkstyle-metadata PUBLIC
+"-//eclipse-cs//DTD Check Metadata 1.1//EN"
+"http://eclipse-cs.sourceforge.net/dtds/checkstyle-metadata_1_1.dtd">
+<checkstyle-metadata>
+    <rule-group-metadata name="My custom checks"  priority="1600">
+        <description>%MyCustomChecks.desc</description>
+
+        <rule-metadata name="%MethodLimit.name" internal-name="MethodLimit" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.MethodLimitCheck" />
+            <description>%MethodLimit.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="30">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+            <quickfix classname="net.sf.eclipsecs.sample.checks.MethodLimitQuickfix" />
+        </rule-metadata>
+        
+        <rule-metadata name="%Blob.name" internal-name="Blob" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.BlobCheck" />
+            <description>%Blob.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="10">
+                <description>The maximum number of allowed variables/methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        
+        <rule-metadata name="%DuplicateCode.name" internal-name="DuplicateCode" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.DuplicateCodeCheck" />
+            <description>%DuplicateCode.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="100">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        
+        <rule-metadata name="%FeatureEnvy.name" internal-name="FeatureEnvy" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.FeatureEnvyCheck" />
+            <description>%FeatureEnvy.desc</description>
+        </rule-metadata>
+        
+        <rule-metadata name="%RefusedBequest.name" internal-name="RefusedBequest" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.RefusedBequestCheck" />
+            <description>%RefusedBequest.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="100">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        
+        <rule-metadata name="%SwissArmyKnife.name" internal-name="SwissArmyKnife" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.SwissArmyKnifeCheck" />
+            <description>%SwissArmyKnife.desc</description>
+            <property-metadata name="maxInterfaces" datatype="Integer" default-value="5">
+                <description>The maximum number of allowed interfaces.</description>  
+            </property-metadata>
+            <property-metadata name="maxMethods" datatype="Integer" default-value="5">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        
+        <rule-metadata name="%TypeChecking.name" internal-name="TypeChecking" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.TypeCheckingCheck" />
+            <description>%TypeChecking.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="100">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        
+        <rule-metadata name="%SpaghettiCode.name" internal-name="SpaghettiCode" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.SpaghettiCodeCheck" />
+            <description>%SpaghettiCode.desc</description>
+          <!--  <property-metadata name="maxGlobalVars" datatype="Integer" default-value="5">
+                <description>The maximum number of global variables.</description>
+            </property-metadata>
+            <property-metadata name="maxMethodLength" datatype="Integer" default-value="5">
+                <description>The maximum allowed number of lines in a single method.</description>  
+            </property-metadata>
+            <property-metadata name="maxClassLength" datatype="Integer" default-value="5">
+                <description>The maximum number of lines in a single class.</description>
+            </property-metadata> -->
+        </rule-metadata>
+        
+        <!--
+        The below are the checks we have not yet assigned,
+            so they do not clutter up the interface until we
+            are ready to work on them / if we work on them
+        -->
+        
+        <!--
+        <rule-metadata name="%DivergentChange.name" internal-name="DivergentChange" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.DivergentChangeCheck" />
+            <description>%DivergentChange.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="100">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        -->
+        
+        <!--
+        <rule-metadata name="%FunctionalDecomposition.name" internal-name="FunctionalDecomposition" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.FunctionalDecompositionCheck" />
+            <description>%FunctionalDecomposition.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="100">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        -->
+        
+        <!--
+        <rule-metadata name="%ParallelInheritance.name" internal-name="ParallelInheritance" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.ParallelInheritanceCheck" />
+            <description>%ParallelInheritance.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="100">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        -->
+        
+        <!--
+        <rule-metadata name="%ShotgunSurgery.name" internal-name="ShotgunSurgery" parent="TreeWalker">
+            <alternative-name internal-name="net.sf.eclipsecs.sample.checks.ShotgunSurgeryCheck" />
+            <description>%ShotgunSurgery.desc</description>
+            <property-metadata name="max" datatype="Integer" default-value="100">
+                <description>The maximum number of allowed methods.</description>
+            </property-metadata>
+        </rule-metadata>
+        -->
+        
+    </rule-group-metadata>
+</checkstyle-metadata>
